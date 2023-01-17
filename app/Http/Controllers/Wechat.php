@@ -19,18 +19,7 @@ class Wechat extends Controller
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'charset' => 'utf-8'
-                ],
-                'body' => json_encode([
-                    "jump_wxa"=>
-                        [
-                            "path"=>"/",
-                            "query"=>""
-                        ],
-                    "is_expire"=>true,
-                    "expire_type"=>1,
-                    "expire_interval"=>1,
-                    "env_version"=>"release"
-                ])
+                ]
             ]);
             $result = json_decode($result->getBody(), true);
             Log::info(json_encode($result));
