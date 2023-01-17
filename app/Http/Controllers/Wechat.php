@@ -11,7 +11,7 @@ class Wechat extends Controller
     {
         try {
             $client = new Client([
-                'base_uri' => 'https://api.weixin.qq.com',
+                'base_uri' => 'http://api.weixin.qq.com',
                 'connect_timeout' => 10,
                 'timeout' => 30,
             ]);
