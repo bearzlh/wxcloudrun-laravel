@@ -15,10 +15,13 @@ class Wechat extends Controller
                 'connect_timeout' => 10,
                 'timeout' => 30,
             ]);
-            $result = $client->request('POST', '/wxa/generatescheme',                 [
-                'headers' => [
-                    'Content-Type' => 'application/json',
-                    'charset' => 'utf-8'
+            $result = $client->request('POST', '/wxa/generatescheme',
+                [
+                'json' => [
+                    "is_expire"=>true,
+                    "expire_type"=>1,
+                    "expire_interval"=>1,
+                    "env_version"=>"release"
                 ]
             ]);
             $result = json_decode($result->getBody(), true);
