@@ -3,6 +3,7 @@
     <title>打开小程序</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script>
         window.onerror = e => {
             console.error(e)
@@ -57,7 +58,7 @@
 
                 wx.config({
                     // debug: true, // 调试时可开启
-                    appId: 'wxef508d61b1cf37aa', // <!-- replace -->
+                    appId: 'wx43f1fd2667893c46', // <!-- replace -->
                     timestamp: 0, // 必填，填任意数字即可
                     nonceStr: 'nonceStr', // 必填，填任意非空字符串即可
                     signature: 'signature', // 必填，填任意非空字符串即可
@@ -77,9 +78,9 @@
                     // 必填，表示是未登录模式
                     identityless: true,
                     // 资源方 AppID
-                    resourceAppid: 'wxef508d61b1cf37aa', // <!-- replace -->
+                    resourceAppid: 'wx43f1fd2667893c46', // <!-- replace -->
                     // 资源方环境 ID
-                    resourceEnv: '云开发环境 ID', // <!-- replace -->
+                    resourceEnv: 'prod-4gz4py1r018906a9', // <!-- replace -->
                 })
                 await c.init()
                 window.c = c
@@ -100,6 +101,26 @@
         })
 
         async function openWeapp(onBeforeJump) {
+            $.post({
+                method: "POST",
+                url: 'http://api.weixin.qq.com/wxa/generatescheme',
+                data: {
+                    "jump_wxa":
+                        {
+                            "path": "/",
+                            "query": ""
+                        },
+                    "is_expire":true,
+                    "expire_type":1,
+                    "expire_interval":1,
+                    "env_version": "release"
+                },
+                success: function (result){
+                    alert(JSON.stringify(result));
+                    console.log(result);
+                }
+            });
+
             var c = window.c
             const res = await c.callFunction({
                 name: 'public',
@@ -179,16 +200,16 @@
 <body>
 <div class="page full">
     <div id="public-web-container" class="hidden">
-        <p class="">正在打开 “玲珑书巷”...</p> <!-- replace -->
+        <p class="">正在打开 “小景商铺”...</p> <!-- replace -->
         <a id="public-web-jump-button" href="javascript:" class="weui-btn weui-btn_primary weui-btn_loading" onclick="openWeapp()">
             <span id="public-web-jump-button-loading" class="weui-primary-loading weui-primary-loading_transparent"><i class="weui-primary-loading__dot"></i></span>
             打开小程序
         </a>
     </div>
     <div id="wechat-web-container" class="hidden">
-        <p class="">点击以下按钮打开 “玲珑书巷”</p> <!-- replace -->
+        <p class="">点击以下按钮打开 “小景商铺”</p> <!-- replace -->
         <!-- 跳转小程序的开放标签。文档 https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html -->
-        <wx-open-launch-weapp id="launch-btn" username="gh_dbb0d96737f3" path="/"> <!-- replace -->
+        <wx-open-launch-weapp id="launch-btn" username="gh_7ce47b5de33b" path="/"> <!-- replace -->
             <template>
                 <button style="width: 200px; height: 45px; text-align: center; font-size: 17px; display: block; margin: 0 auto; padding: 8px 24px; border: none; border-radius: 4px; background-color: #07c160; color:#fff;">打开小程序</button>
             </template>
