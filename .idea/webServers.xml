@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0875cee0-008a-46dc-8d3a-8936aeb2bf98" name="43">
+        <fileTransfer rootFolder="/data/web/wxcloudrun-laravel" accessType="SFTP" host="192.168.0.43" port="22" sshConfigId="a1ead13a-8ff4-4cb1-bc36-187edd8a9bf1" sshConfig="43">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

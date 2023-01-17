@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '7b6cfd206f01d70cb81fe52d2a5862d2bf9e7d2b',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -120,6 +120,33 @@
             'aliases' => array(),
             'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
             'dev_requirement' => true,
+        ),
+        'guzzlehttp/guzzle' => array(
+            'pretty_version' => '7.5.0',
+            'version' => '7.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/guzzle',
+            'aliases' => array(),
+            'reference' => 'b50a2a1251152e43f6a37f0fa053e730a67d25ba',
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/promises' => array(
+            'pretty_version' => '1.5.2',
+            'version' => '1.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/promises',
+            'aliases' => array(),
+            'reference' => 'b94b2807d85443f9719887892882d0329d1e2598',
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/psr7' => array(
+            'pretty_version' => '2.4.3',
+            'version' => '2.4.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/psr7',
+            'aliases' => array(),
+            'reference' => '67c26b443f348a51926030c83481b85718457d3d',
+            'dev_requirement' => false,
         ),
         'hamcrest/hamcrest-php' => array(
             'pretty_version' => 'v2.0.1',
@@ -332,12 +359,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '7b6cfd206f01d70cb81fe52d2a5862d2bf9e7d2b',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -574,6 +601,51 @@
                 0 => '1.0',
             ),
         ),
+        'psr/http-client' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-client',
+            'aliases' => array(),
+            'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
+            'dev_requirement' => false,
+        ),
+        'psr/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-factory' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-factory',
+            'aliases' => array(),
+            'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+            'dev_requirement' => false,
+        ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+            'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
         'psr/log' => array(
             'pretty_version' => '1.1.4',
             'version' => '1.1.4.0',
@@ -586,8 +658,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -606,6 +678,15 @@
             'install_path' => __DIR__ . '/../psy/psysh',
             'aliases' => array(),
             'reference' => 'a0d9981aa07ecfcbea28e4bfa868031cca121e7d',
+            'dev_requirement' => false,
+        ),
+        'ralouphie/getallheaders' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ralouphie/getallheaders',
+            'aliases' => array(),
+            'reference' => '120b605dfeb996808c31b6477290a714d356e822',
             'dev_requirement' => false,
         ),
         'ramsey/uuid' => array(
@@ -774,6 +855,15 @@
             'install_path' => __DIR__ . '/../symfony/debug',
             'aliases' => array(),
             'reference' => '43ede438d4cb52cd589ae5dc070e9323866ba8e0',
+            'dev_requirement' => false,
+        ),
+        'symfony/deprecation-contracts' => array(
+            'pretty_version' => 'v2.5.2',
+            'version' => '2.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
+            'aliases' => array(),
+            'reference' => 'e8b495ea28c1d97b5e0c121748d6f9b53d075c66',
             'dev_requirement' => false,
         ),
         'symfony/error-handler' => array(

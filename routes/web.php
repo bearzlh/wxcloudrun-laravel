@@ -19,6 +19,9 @@ Route::get('/', function () {
 });
 
 // 获取当前计数
+Route::get('/api/generateScheme', 'Wechat@generateScheme');
+
+// 获取当前计数
 Route::get('/api/count', 'CounterController@getCount');
 
 // 更新计数，自增或者清零
