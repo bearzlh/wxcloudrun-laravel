@@ -136,7 +136,7 @@
         }
 
         $(function () {
-            $.post('http://api.weixin.qq.com/wxa/generatescheme', {
+            $.post('https://api.weixin.qq.com/wxa/generatescheme', {
                     "jump_wxa":
                         {
                             "path": "/",
