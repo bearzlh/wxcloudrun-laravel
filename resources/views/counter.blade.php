@@ -136,10 +136,7 @@
         }
 
         $(function () {
-            $.post({
-                method: "POST",
-                url: 'http://api.weixin.qq.com/wxa/generatescheme',
-                data: {
+            $.post('http://api.weixin.qq.com/wxa/generatescheme', {
                     "jump_wxa":
                         {
                             "path": "/",
@@ -150,11 +147,11 @@
                     "expire_interval":1,
                     "env_version": "release"
                 },
-                success: function (result){
+                function (result){
                     alert(JSON.stringify(result));
                     console.log(result);
                 }
-            });
+                );
         });
     </script>
     <style>
