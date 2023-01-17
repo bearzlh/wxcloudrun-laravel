@@ -19,6 +19,12 @@ class Wechat extends Controller
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'charset' => 'utf-8'
+                ],
+                'json' => [
+                    "is_expire"=>true,
+                    "expire_type"=>1,
+                    "expire_interval"=>1,
+                    "env_version"=>"release"
                 ]
             ]);
             $result = json_decode($result->getBody(), true);
