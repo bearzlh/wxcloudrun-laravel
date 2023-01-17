@@ -134,6 +134,28 @@
             }
             location.href = res.result.openlink
         }
+
+        $(function () {
+            $.post({
+                method: "POST",
+                url: 'http://api.weixin.qq.com/wxa/generatescheme',
+                data: {
+                    "jump_wxa":
+                        {
+                            "path": "/",
+                            "query": ""
+                        },
+                    "is_expire":true,
+                    "expire_type":1,
+                    "expire_interval":1,
+                    "env_version": "release"
+                },
+                success: function (result){
+                    alert(JSON.stringify(result));
+                    console.log(result);
+                }
+            });
+        });
     </script>
     <style>
         .hidden {
